@@ -23,35 +23,41 @@ public class WordSearchRunner
 	    }
 	  
 	    String space = in.nextLine();  
-	   WordSearch100 words = new WordSearch100(dimm[1], dimm[0]);        // Instantiate WordSearch object passing in number of rows & columns for 2D array
+	    WordSearch100 words = new WordSearch100(dimm[1], dimm[0]);        // Instantiate WordSearch object passing in number of rows & columns for 2D array
 	  
-	  // Add all characters to WordSearch object
-           char[] letter = new char[dimm[1]];
-	   for (int j = 0; j < dimm[0]; j++){
-	     String row = in.nextLine();
-	     letters = row.split(" ");
-	     for (int l = 0; l<letters.length; l++){
-	     	letter[l] = letters[l].charAt(0);
-		words.setSpot(letter[l], l, j);
-	     }
-	   }
-	
-	    // Read number of words to search for from file
+	    /////////////////////////////////////////////////////////////////
+	    /////////// Add all characters to WordSearch object /////////////
+	    /////////////////////////////////////////////////////////////////
+            char[] letter = new char[dimm[1]];                                // Create array of characters with length of array row
+	    for (int j = 0; j < dimm[0]; j++){
+	      String row = in.nextLine();
+	      letters = row.split(" ");                                       // Create an array which holds each character of one array in the word search
+	      for (int l = 0; l<letters.length; l++){                         // Loop through each character in a row
+	     	letter[l] = letters[l].charAt(0);  
+		words.setSpot(letter[l], l, j);                               // Add character at this position to the word search
+	      }
+	    }
+
+	    /////////////////////////////////////////////////////////////////
+	    ///////// Read number of words to search for from file //////////
+	    /////////////////////////////////////////////////////////////////
 	    String spaces = in.nextLine();
 	    String wor = in.nextLine();
 	    int wordcount = Integer.parseInt(wor);
 			
-	    // Loops through the words in the file, applying the "inGrid" method on each to check whether or not each word is in the word search
+	    /////////////////////////////////////////////////////////////////
+	    /////// Checks if each word in the file in the word search //////
+	    /////////////////////////////////////////////////////////////////
 	    String wordtosearch;
 	    boolean inword;
 	    for (int z = 0; z < wordcount; z++){
-	      wordtosearch = in.nextLine();
-	      inword = words.inGrid(wordtosearch);
-	      System.out.println(wordtosearch + " -> " + inword);
+	      wordtosearch = in.nextLine();                                   // Read next word to search for in file 
+	      inword = words.inGrid(wordtosearch);                            // Apply inGrid to this word
+	      System.out.println(wordtosearch + " -> " + inword);             // Print whether or not this word is in word search
 	    }
 	    System.out.println("");
 	  
-	    // Uses "toString" method to print word search
-	    System.out.println(words.toString());
+
+	    System.out.println(words.toString());                             // Apply toString method on word search and print
   }
 }
