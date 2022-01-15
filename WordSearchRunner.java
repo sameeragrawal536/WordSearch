@@ -6,24 +6,24 @@ public class WordSearchRunner
 {
   public static void main(String[] args) throws FileNotFoundException
 	{
-            // Instantiate Scanner object to read in from file
-	    Scanner in = new Scanner(new File("Words.txt"));
-	  
-	   // Get dimensions of word search
-	    String dim = in.nextLine();
-	    String[] dims = dim.split(" ");
+            
+	    Scanner in = new Scanner(new File("Words.txt"));                  // Instantiate Scanner object to read in from file
+	    
+	    /////////////////////////////////////////////////////////////////
+	    //////////////// Get dimensions of word search //////////////////
+	    /////////////////////////////////////////////////////////////////
+	    String dim = in.nextLine();                                       // Reading in line of file which has word search dimensions
+	    String[] dims = dim.split(" ");                                                               
 	    int[] dimm = new int[2];
 	    int dimmm;
 	    String[] letters;
 	    for (int i = 0; i < 2; i++) {
 	      dimmm = Integer.parseInt(dims[i]);
-	      dimm[i] = dimmm;
+	      dimm[i] = dimmm;                                                // Array which holds dimensions of word search          
 	    }
 	  
-	    String space = in.nextLine();
-		
-           // Instantiate WordSearch object passing in number of rows & columns for 2D array
-	   WordSearch100 words = new WordSearch100(dimm[1], dimm[0]);
+	    String space = in.nextLine();  
+	   WordSearch100 words = new WordSearch100(dimm[1], dimm[0]);        // Instantiate WordSearch object passing in number of rows & columns for 2D array
 	  
 	  // Add all characters to WordSearch object
            char[] letter = new char[dimm[1]];
