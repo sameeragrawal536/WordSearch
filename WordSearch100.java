@@ -3,9 +3,7 @@ import java.util.ArrayList;
 
 public class WordSearch100
 {
-	/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
-	/*/*/*/*/*/* Create word search 2D array if given length of a row & a column */*/*/*/*
-	/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*//
+	/*/*/*/*/*/*/* Create word search 2D array if given length of a row & a column */*/*/*/*/*/*/*
 	char[][] twoD_arr;
 
 	public WordSearch100(int row, int col)
@@ -13,10 +11,7 @@ public class WordSearch100
 		twoD_arr = new char[col][row];
 	}
 	
-	/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*
-	/*/*/*/*/*/*/*/*/*/*/*/*/* Set character at a specific position */*/*/*/**/*/*/*/*/*/*
-	/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/**/
-		
+	/*/*/*/*/*/*/*/*/*/*/*/*/* Set character at a specific position */*/*/*/**/*/*/*/*/*/* 
 	public void setSpot(char s, int row, int col)
 	{
 		twoD_arr[col][row] = s;
